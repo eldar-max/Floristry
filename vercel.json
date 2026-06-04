@@ -1,6 +1,8 @@
 {
-  "cleanUrls": false,
-  "routes": [
-    { "handle": "filesystem" }
+  "rewrites": [
+    {
+      "source": "/resume.html",
+      "destination": "/resume.html"
+    }
   ]
 }
