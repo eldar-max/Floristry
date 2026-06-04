@@ -1,0 +1,408 @@
+<!DOCTYPE html>
+<html lang="ky">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Резюме - eldar</title>
+    <style>
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background-color: #1c1215;
+            color: #fff;
+            line-height: 1.6;
+            padding: 40px 20px;
+        }
+        .container {
+            max-width: 850px;
+            margin: 0 auto;
+            background-color: #25181c;
+            padding: 40px;
+            border-radius: 12px;
+            border: 1px solid rgba(255, 255, 255, 0.08);
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
+        }
+        
+   
+        .github-welcome {
+            text-align: center;
+            margin-bottom: 30px;
+        }
+        .github-welcome h1 {
+            font-size: 2.2rem;
+            color: #ff8b94;
+            margin-bottom: 5px;
+        }
+        .github-welcome h3 {
+            font-size: 1.2rem;
+            color: rgba(255,255,255,0.7);
+            font-weight: 400;
+            margin-bottom: 15px;
+        }
+        .banner-img {
+            width: 100%;
+            max-height: 250px;
+            object-fit: cover;
+            border-radius: 8px;
+            margin-bottom: 15px;
+            border: 1px solid rgba(255,255,255,0.1);
+        }
+        .typing-svg {
+            margin-top: 10px;
+            display: block;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        
+        .contacts {
+            margin: 25px 0 35px 0;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 12px;
+            font-size: 0.95rem;
+            background: rgba(255, 255, 255, 0.02);
+            padding: 20px;
+            border-radius: 8px;
+            border: 1px solid rgba(255,255,255,0.05);
+        }
+        .contacts a {
+            color: #ff8b94;
+            text-decoration: none;
+        }
+        .contacts a:hover {
+            text-decoration: underline;
+        }
+        
+        hr {
+            border: none;
+            height: 1px;
+            background: rgba(255, 139, 148, 0.2);
+            margin: 35px 0;
+        }
+
+        section {
+            margin-bottom: 35px;
+        }
+        h2 {
+            font-size: 1.3rem;
+            color: #ff8b94;
+            border-left: 4px solid #ff8b94;
+            padding-left: 12px;
+            margin-bottom: 20px;
+            letter-spacing: 0.5px;
+        }
+        p {
+            color: rgba(255, 255, 255, 0.85);
+            font-size: 1rem;
+        }
+        ul {
+            list-style: none;
+        }
+
+        /* Таблица стека */
+        .tech-table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 15px 0;
+            background: rgba(255, 255, 255, 0.02);
+            border-radius: 6px;
+            overflow: hidden;
+        }
+        .tech-table th, .tech-table td {
+            padding: 12px;
+            text-align: left;
+            border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+        }
+        .tech-table th {
+            background: rgba(255, 139, 148, 0.1);
+            color: #ff8b94;
+            font-weight: 600;
+        }
+        .tech-table td img {
+            vertical-align: middle;
+        }
+
+       
+        .github-stats-container {
+            text-align: center;
+            display: flex;
+            flex-direction: column;
+            gap: 15px;
+            align-items: center;
+            justify-content: center;
+        }
+        .stats-row {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 15px;
+            justify-content: center;
+            width: 100%;
+        }
+        .stats-row img {
+            max-width: 100%;
+            height: auto;
+            border-radius: 6px;
+        }
+
+        .skills-list li {
+            margin-bottom: 12px;
+            background: rgba(255, 255, 255, 0.03);
+            padding: 10px 15px;
+            border-radius: 6px;
+            border-left: 3px solid rgba(255, 139, 148, 0.4);
+        }
+        .skills-list strong {
+            color: #fff;
+        }
+        .project-card, .edu-card {
+            background: rgba(255, 255, 255, 0.02);
+            padding: 20px;
+            border-radius: 8px;
+            border: 1px solid rgba(255, 255, 255, 0.05);
+        }
+        .project-header, .edu-header {
+            display: flex;
+            justify-content: space-between;
+            flex-wrap: wrap;
+            gap: 10px;
+            margin-bottom: 10px;
+        }
+        .project-title, .edu-title {
+            font-size: 1.1rem;
+            font-weight: bold;
+            color: #fff;
+        }
+        .date {
+            color: rgba(255, 255, 255, 0.5);
+            font-size: 0.9rem;
+        }
+        .tech-stack-title {
+            font-size: 0.9rem;
+            color: #ff8b94;
+            margin-bottom: 15px;
+        }
+        .work-list {
+            list-style-type: disc;
+            padding-left: 20px;
+            color: rgba(255, 255, 255, 0.8);
+        }
+        .work-list li {
+            margin-bottom: 8px;
+        }
+        .lang-list li {
+            margin-bottom: 6px;
+        }
+        
+        .social-buttons {
+            display: flex;
+            gap: 10px;
+            justify-content: center;
+            margin-top: 15px;
+        }
+        .social-buttons img {
+            height: 40px;
+            border-radius: 4px;
+        }
+
+        .btn-print {
+            display: block;
+            width: 100%;
+            max-width: 200px;
+            margin: 40px auto 0 auto;
+            padding: 12px;
+            background-color: #ff8b94;
+            color: #1c1215;
+            border: none;
+            border-radius: 6px;
+            font-weight: bold;
+            cursor: pointer;
+            text-align: center;
+            font-size: 1rem;
+            transition: opacity 0.2s;
+        }
+        .btn-print:hover { opacity: 0.9; }
+
+        @media (max-width: 650px) {
+            body { padding: 15px 10px; }
+            .container { padding: 20px; }
+            .github-welcome h1 { font-size: 1.8rem; }
+            .project-header, .edu-header { flex-direction: column; }
+        }
+
+        @media print {
+            body { background: #fff; color: #000; padding: 0; }
+            .container { background: #fff; color: #000; border: none; box-shadow: none; padding: 0; }
+            h2, .contacts a, .tech-stack-title { color: #000 !important; border-color: #000 !important; }
+            .skills-list li, .project-card, .edu-card, .contacts { background: none; border: none; padding: 0; margin-bottom: 15px; }
+            .btn-print, .typing-svg, .banner-img, .github-stats-container, .social-buttons { display: none !important; }
+            p, .work-list li, .date, .tech-table td, .tech-table th { color: #000 !important; }
+            .tech-table th { background: rgba(0,0,0,0.05); }
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        
+        
+        <div class="github-welcome">
+            <h1>Привет, я eldar! </h1>[cite: 1]
+            <h3>Frontend Developer | HTML • CSS • JavaScript</h3>
+            
+            <img class="banner-img" src="https://repository-images.githubusercontent.com/338803879/bb698200-6efc-11eb-910f-250cda75b482" alt="Header">
+            
+            <img class="typing-svg" src="https://readme-typing-svg.herokuapp.com?font=Fira+Code&pause=1000&color=F7DF1E&width=435&lines=Building+web+interfaces;Coding+in+JavaScript;Learning+new+frameworks" alt="Typing SVG">
+        </div>
+
+        <!-- Контакты -->
+        <div class="contacts">
+            <div> <strong>Телефон:</strong> <a href="tel:+996500271035">+996 500271035</a></div>[cite: 1]
+            <div> <strong>Почта:</strong> <a href="mailto:isabekoveldat@gmail.com">isabekoveldat@gmail.com</a></div>[cite: 1]
+            <div> <strong>GitHub:</strong> <a href="https://github.com/eldar-max" target="_blank">eldar max</a></div>[cite: 1]
+            <div> <strong>Жашаган жери:</strong> Бишкек</div>[cite: 1]
+        </div>
+
+        <section>
+            <h2>МАКСАТЫ</h2>[cite: 1]
+            <p>«Окурмен» академиясында Фронтенд (React) багыты боюнча ийгиликтүү билим алдым. Окуу учурунда алган теориялык билимдеримди практикалык долбоорлордо колдонуп, өз алдынча сайттарды курууну үйрөндүм. Максатым — Junior иштеп чыгуучу катары реалдуу долбоорлорго катышып, тажрыйбамды дагы жогорулатуу жана командага пайда алып келүү.</p>[cite: 1]
+        </section>
+
+        <hr>
+
+       
+        <section>
+            <h2>Мой технологический стек</h2>
+            <table class="tech-table">
+                <thead>
+                    <tr>
+                        <th>Language</th>
+                        <th style="text-align: center;">Icon</th>
+                        <th>Level</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>HTML5</td>
+                        <td style="text-align: center;"><img src="https://skillicons.dev/icons?i=html" width="25" alt="HTML5" /></td>
+                        <td>Advanced</td>
+                    </tr>
+                    <tr>
+                        <td>CSS3</td>
+                        <td style="text-align: center;"><img src="https://skillicons.dev/icons?i=css" width="25" alt="CSS3" /></td>
+                        <td>Advanced</td>
+                    </tr>
+                    <tr>
+                        <td>JavaScript</td>
+                        <td style="text-align: center;"><img src="https://skillicons.dev/icons?i=js" width="25" alt="JavaScript" /></td>
+                        <td>Intermediate / Advanced</td>
+                    </tr>
+                </tbody>
+            </table>
+        </section>
+
+        <section>
+            <h2>ТЕХНИКАЛЫК БИЛИМИМ (SKILLS)</h2>[cite: 1]
+            <ul class="skills-list">
+                <li><strong>Негизги технологиялар:</strong> HTML, CSS, JavaScript</li>[cite: 1]
+                <li><strong>Фреймворк жана китепканалар:</strong> React.js, Vite</li>[cite: 1]
+                <li><strong>Маршрутизация жана Абал:</strong> React Router DOM, Redux Toolkit (баштапкы деңгээл)</li>[cite: 1]
+                <li><strong>Сервер менен иштөө:</strong> REST API (Fetch), Firebase Realtime Database (интеграция)</li>[cite: 1]
+                <li><strong>Адаптивдүүлүк:</strong> Flexbox, CSS Grid, Медиа суроо-талаптар (Media queries)</li>[cite: 1]
+                <li><strong>Куралдар:</strong> Git, GitHub, VS Code, Vercel</li>[cite: 1]
+            </ul>
+        </section>
+
+        <hr>
+
+        
+        <section>
+            <h2>Моя активность на GitHub</h2>
+            <div class="github-stats-container">
+                <div class="stats-row">
+                    <img src="https://github-readme-stats.vercel.app/api?username=eldar-max&show_icons=true&theme=vision-friendly-dark&include_all_commits=true&count_private=true" alt="GitHub Stats" />
+                    <img src="https://github-readme-stats.vercel.app/api/top-langs/?username=eldar-max&layout=compact&theme=vision-friendly-dark" alt="Top Langs" />
+                </div>
+            </div>
+        </section>
+
+        
+        <section>
+            <h2> GitHub Streak & Snake</h2>
+            <div class="github-stats-container">
+                <div class="stats-row">
+                    <img src="https://github-readme-streak-stats.herokuapp.com/?user=eldar-max&theme=vision-friendly-dark" alt="streak stats" />
+                </div>
+                <br>
+                <div class="stats-row">
+                    <img src="https://raw.githubusercontent.com/eldar-max/eldar-max/output/github-contribution-grid-snake.svg" alt="snake" onerror="this.style.display='none'" />
+                </div>
+            </div>
+        </section>
+
+        <hr>
+
+        <section>
+            <h2>ОКУУ УЧУРУНДАГЫ ДОЛБООРЛОРУМ</h2>[cite: 1]
+            <div class="project-card">
+                <div class="project-header">
+                    <div class="project-title">Frontend Developer Студент — «Окурмен» IT Академиясы</div>[cite: 1]
+                    <div class="date">Мөөнөтү: 2026-жыл (7 ай)</div>[cite: 1]
+                </div>
+                <div class="tech-stack-title">Дипломдук долбоор: Интернет-дүкөн жана Кызмат көрсөтүү сайты (Гүл студиясы)</div>[cite: 1]
+                <div style="font-size: 0.9rem; margin-bottom: 12px; color: rgba(255,255,255,0.6);">Технологиялар: React, Vite, React Router DOM, Firebase REST API</div>[cite: 1]
+                <ul class="work-list">
+                    <li>Сайттын түзүлүшүн (структурасын) React Router DOM аркылуу барактарга бөлүп, SPA (Single Page Application) форматында жасадым.</li>[cite: 1]
+                    <li>Кардарлар үчүн негизги сайтты жана товарларды кошуп/өчүрсө боло турган Админ панелин курдүм.</li>[cite: 1]
+                    <li>Firebase Realtime Database кызматын кошуп, маалыматтарды серверден тартууну жана өзгөртүүнү уюштурдум.</li>[cite: 1]
+                    <li>Сайтты телефондорго ылайыкташтырып (Responsive верстка), бардык экрандарда туура көрүнө тургандай кылдым.</li>[cite: 1]
+                    <li>Даяр долбоорду Vercel серверине жайгаштырдым.</li>[cite: 1]
+                </ul>
+            </div>
+        </section>
+
+        <section>
+            <h2>БИЛИМИ</h2>[cite: 1]
+            <div class="edu-card">
+                <div class="edu-header">
+                    <div class="edu-title">«Окурмен» IT Академиясы</div>[cite: 1]
+                    <div class="date">Бүткөн жылы: 2026</div>[cite: 1]
+                </div>
+                <p><strong>Багыты:</strong> Frontend (React) Developer</p>[cite: 1]
+            </div>
+        </section>
+
+        <section>
+            <h2>ТИЛДЕР</h2>[cite: 1]
+            <ul class="lang-list">
+                <li>🇰🇬 <strong>Кыргыз тили</strong> — Эне тили</li>[cite: 1]
+                <li>🇷🇺 <strong>Орус тили</strong> — Сүйлөшүү деңгээли</li>[cite: 1]
+            </ul>
+        </section>
+
+        <hr>
+
+        
+        <section>
+            <h2 style="text-align: center; border: none; padding: 0;">📫 Как со мной связаться:</h2>
+            <div class="social-buttons">
+               
+                <a href="https://t.me/ТВОЙ_ТЕЛЕГРАМ" target="_blank">
+                    <img src="https://img.shields.io/badge/Telegram-2CA5E0?style=for-the-badge&logo=telegram&logoColor=white" alt="Telegram">
+                </a>
+             
+                <a href="https://linkedin.com/in/ТВОЙ_ЛИНКЕДИН" target="_blank">
+                    <img src="https://img.shields.io/badge/LinkedIn-0077B5?style=for-the-badge&logo=linkedin&logoColor=white" alt="LinkedIn">
+                </a>
+            </div>
+        </section>
+
+        <button class="btn-print" onclick="window.print()">Распечатать / Сохранить PDF</button>
+    </div>
+
+</body>
+</html>

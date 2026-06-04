@@ -1,0 +1,197 @@
+/* Замени весь код в Admin.module.css на этот: */
+.admin-wrapper {
+  padding: 100px 20px;
+  background-color: #1c1215;
+  color: #fff;
+  min-height: 100vh;
+  font-family: sans-serif;
+}
+
+.title {
+  text-align: center;
+  letter-spacing: 2px;
+  font-size: 2.2rem;
+  margin: 0;
+  text-transform: uppercase;
+}
+
+.divider {
+  width: 60px;
+  height: 1px;
+  background-color: #fff;
+  margin: 20px auto 40px;
+  opacity: 0.6;
+}
+
+.panel-card {
+  max-width: 900px;
+  margin: 0 auto;
+  background-color: #25181c;
+  padding: 40px;
+  border-radius: 12px;
+  border: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+.panel-title {
+  font-size: 1.4rem;
+  margin-bottom: 25px;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+  padding-bottom: 12px;
+}
+
+.offer-row {
+  padding: 25px 0;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+.view-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 20px;
+}
+
+.info-block {
+  display: flex;
+  gap: 20px;
+  align-items: center;
+}
+
+.preview-img {
+  width: 70px;
+  height: 70px;
+  object-fit: cover;
+  border-radius: 6px;
+}
+
+.offer-info h4 {
+  margin: 0 0 6px 0;
+  color: #ff8b94;
+}
+
+.edit-form {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  width: 100%;
+}
+
+.input-field, .textarea-field {
+  width: 100%;
+  padding: 12px 16px;
+  background-color: #1c1215;
+  border: 1px solid rgba(255, 255, 255, 0.15);
+  border-radius: 6px;
+  color: #fff;
+  box-sizing: border-box;
+}
+
+.textarea-field {
+  height: 100px;
+}
+
+.button-group {
+  display: flex;
+  gap: 12px;
+}
+
+.btn {
+  padding: 10px 20px;
+  font-weight: bold;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+}
+
+.btn-primary { background-color: #fff; color: #1c1215; }
+.btn-secondary { background-color: transparent; color: #fff; border: 1px solid #fff; }
+.btn-edit { background-color: transparent; color: #fff; border: 1px solid rgba(255,255,255,0.2); }
+
+
+.login-wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  background-color: #1c1215;
+  font-family: sans-serif;
+  padding: 20px;
+}
+
+.login-card {
+  background-color: #25181c;
+  padding: 40px;
+  border-radius: 12px;
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  width: 100%;
+  max-width: 400px;
+  text-align: center;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+}
+
+.login-card h2 {
+  color: #fff;
+  margin-bottom: 25px;
+  font-size: 1.6rem;
+  letter-spacing: 1px;
+}
+
+.error-message {
+  color: #ff8b94;
+  font-size: 0.9rem;
+  margin-bottom: 15px;
+  font-weight: bold;
+}
+
+
+.file-upload-label {
+  display: inline-block;
+  background-color: #1c1215;
+  color: #fff;
+  border: 1px dashed rgba(255, 255, 255, 0.3);
+  padding: 12px;
+  text-align: center;
+  border-radius: 6px;
+  cursor: pointer;
+  margin-bottom: 15px;
+  font-size: 0.9rem;
+  transition: all 0.2s ease;
+  width: 100%;
+}
+
+.file-upload-label:hover {
+  border-color: #ff8b94;
+  color: #ff8b94;
+}
+
+.file-input {
+  display: none; 
+}
+
+
+.btn-delete {
+  background-color: transparent;
+  color: #ff8b94;
+  border: 1px solid #ff8b94;
+}
+
+.btn-delete:hover {
+  background-color: #ff8b94;
+  color: #1c1215;
+}
+
+.add-new-block {
+  background-color: #25181c;
+  border: 1px dashed rgba(255, 255, 255, 0.15);
+  border-radius: 8px;
+  padding: 25px;
+  margin-bottom: 30px;
+}
+
+.add-new-block h3 {
+  color: #fff;
+  margin-top: 0;
+  margin-bottom: 20px;
+  font-size: 1.2rem;
+  letter-spacing: 1px;
+}

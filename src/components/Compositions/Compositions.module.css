@@ -1,0 +1,189 @@
+.compositionsSection {
+  background-color: #241314; 
+  color: #ffffff;
+  padding: 120px 60px;
+  min-height: 80vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-sizing: border-box;
+  overflow: hidden;
+}
+
+.container {
+  display: flex;
+  max-width: 1200px;
+  width: 100%;
+  align-items: center;
+  justify-content: space-between;
+  gap: 80px;
+}
+
+
+.imageBlock {
+  flex: 1.1;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+}
+
+.imageContainer {
+  position: relative;
+  display: inline-block;
+  width: 100%;
+  max-width: 550px;
+}
+
+.frameDecoration {
+  position: absolute;
+  top: 20px;
+  right: -20px; 
+  width: 100%;
+  height: 100%;
+  border: 1px solid rgba(255, 255, 255, 0.15);
+  pointer-events: none;
+  z-index: 1;
+}
+
+.mainImage {
+  position: relative;
+  display: block;
+  width: 100%;
+  height: 480px;
+  object-fit: cover;
+  z-index: 2;
+  box-shadow: 0 15px 35px rgba(0, 0, 0, 0.2);
+}
+
+/* Правая сторона с текстом */
+.contentBlock {
+  flex: 0.9;
+  max-width: 500px;
+  display: flex;
+  flex-direction: column;
+}
+
+.title {
+  font-family: 'Cormorant Garamond', 'Playfair Display', serif;
+  font-size: clamp(1.8rem, 3.5vw, 2.8rem);
+  font-weight: 300;
+  line-height: 1.25;
+  letter-spacing: 4px;
+  margin: 0 0 20px 0;
+  text-transform: uppercase;
+}
+
+.divider {
+  width: 45px;
+  height: 1px;
+  background-color: rgba(255, 255, 255, 0.5);
+  margin-bottom: 30px;
+}
+
+.description, 
+.subDescription {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: clamp(14px, 1.4vw, 16px);
+  font-weight: 300;
+  line-height: 1.6;
+  color: rgba(255, 255, 255, 0.8);
+  margin: 0 0 20px 0;
+  letter-spacing: 0.3px;
+}
+
+.subDescription {
+  margin-bottom: 40px;
+}
+
+.orderButton {
+  background: transparent;
+  border: 1px solid rgba(255, 255, 255, 0.4);
+  color: #ffffff;
+  padding: 12px 45px;
+  font-family: 'Montserrat', sans-serif;
+  font-size: 10px;
+  letter-spacing: 2.5px;
+  cursor: pointer;
+  text-transform: uppercase;
+  width: fit-content;
+  margin-bottom: 50px;
+  transition: all 0.3s ease;
+}
+
+.orderButton:hover {
+  background: rgba(255, 255, 255, 0.08);
+  border-color: #ffffff;
+}
+
+/* Линейка миниатюр */
+.thumbsGallery {
+  display: flex;
+  gap: 15px;
+}
+
+.thumbWrapper {
+  width: 65px;
+  height: 65px;
+  cursor: pointer;
+  border: 1px solid transparent;
+  overflow: hidden;
+  transition: all 0.3s ease;
+  opacity: 0.6;
+}
+
+.thumbWrapper img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.thumbWrapper:hover {
+  opacity: 0.9;
+}
+
+.activeThumb {
+  border-color: rgba(255, 255, 255, 0.8);
+  opacity: 1;
+}
+
+/* Мобильная адаптивность */
+@media (max-width: 968px) {
+  .compositionsSection {
+    padding: 80px 30px;
+  }
+  
+  .container {
+    flex-direction: column-reverse; 
+    gap: 50px;
+  }
+  
+  .contentBlock {
+    max-width: 100%;
+    align-items: center;
+    text-align: center;
+  }
+  
+  .divider {
+    margin: 0 auto 25px auto;
+  }
+  
+  .orderButton {
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 40px;
+  }
+  
+  .imageBlock {
+    width: 100%;
+    justify-content: center;
+  }
+  
+  .mainImage {
+    height: 350px;
+  }
+  
+  .frameDecoration {
+    right: -12px;
+    top: 12px;
+  }
+}

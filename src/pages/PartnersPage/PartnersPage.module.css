@@ -1,0 +1,87 @@
+.container {
+  padding: 120px 20px 80px;
+  background-color: #1c1215;
+  color: #fff;
+  min-height: 100vh;
+  font-family: sans-serif;
+  text-align: center;
+}
+
+.title {
+  font-size: 2.5rem;
+  letter-spacing: 2px;
+}
+
+.underline {
+  width: 60px;
+  height: 1px;
+  background-color: #fff;
+  margin: 20px auto;
+}
+
+.subtitle {
+  font-size: 1.1rem;
+  opacity: 0.7;
+  max-width: 600px;
+  margin: 0 auto 50px;
+  line-height: 1.6;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 30px;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.card {
+  background-color: #25181c;
+  padding: 40px 20px;
+  border-radius: 4px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  border: 1px solid rgba(255, 255, 255, 0.03);
+  transition: transform 0.2s ease;
+}
+
+.card:hover {
+  transform: translateY(-5px);
+}
+
+.logoWrapper {
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  overflow: hidden;
+  margin-bottom: 20px;
+  border: 2px solid rgba(255, 255, 255, 0.1);
+}
+
+.logo {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.partnerName {
+  font-size: 1.3rem;
+  margin: 0 0 5px 0;
+  font-weight: bold;
+}
+
+.role {
+  font-size: 0.9rem;
+  color: #ff8b94;
+  margin-bottom: 15px;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+}
+
+.desc {
+  font-size: 0.95rem;
+  opacity: 0.7;
+  line-height: 1.6;
+  margin: 0;
+}

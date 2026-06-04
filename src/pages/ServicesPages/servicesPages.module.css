@@ -1,0 +1,174 @@
+.pageWrapper {
+  background-color: #241314;
+  color: #ffffff;
+  padding: 140px 40px 100px 40px;
+  min-height: 100vh;
+  box-sizing: border-box;
+}
+
+
+.pageHeader {
+  text-align: center;
+  max-width: 700px;
+  margin: 0 auto 100px auto;
+}
+
+.pageTitle {
+  font-family: 'Cormorant Garamond', 'Playfair Display', serif;
+  font-size: clamp(32px, 5vw, 48px);
+  font-weight: 300;
+  letter-spacing: 6px;
+  margin: 0 0 20px 0;
+}
+
+.titleDivider {
+  width: 60px;
+  height: 1px;
+  background-color: rgba(255, 255, 255, 0.5);
+  margin: 0 auto 25px auto;
+}
+
+.pageSubtitle {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: clamp(15px, 1.5vw, 18px);
+  line-height: 1.6;
+  color: rgba(255, 255, 255, 0.7);
+}
+
+
+.servicesList {
+  display: flex;
+  flex-direction: column;
+  gap: 140px; 
+  max-width: 1100px;
+  margin: 0 auto;
+}
+
+.serviceItem {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 80px;
+}
+
+
+.rowReverse {
+  flex-direction: row-reverse;
+}
+
+.imageBlock {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+}
+
+.imageContainer {
+  position: relative;
+  width: 100%;
+  max-width: 460px;
+}
+
+.serviceNumber {
+  position: absolute;
+  top: -30px;
+  left: -20px;
+  font-family: 'Montserrat', sans-serif;
+  font-size: 14px;
+  color: rgba(255, 255, 255, 0.3);
+  letter-spacing: 2px;
+  z-index: 3;
+}
+
+.frameDecoration {
+  position: absolute;
+  top: 15px;
+  left: 15px;
+  width: 100%;
+  height: 100%;
+  border: 1px solid rgba(255, 255, 255, 0.15);
+  z-index: 1;
+  pointer-events: none;
+}
+
+.mainImg {
+  position: relative;
+  width: 100%;
+  height: 380px;
+  object-fit: cover;
+  z-index: 2;
+  box-shadow: 0 15px 35px rgba(0, 0, 0, 0.3);
+}
+
+/* Текстовый блок */
+.contentBlock {
+  flex: 1;
+  max-width: 480px;
+}
+
+.serviceTitle {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: clamp(20px, 2.5vw, 26px);
+  font-weight: 400;
+  line-height: 1.3;
+  letter-spacing: 3px;
+  margin: 0 0 15px 0;
+}
+
+.itemDivider {
+  width: 40px;
+  height: 1px;
+  background-color: rgba(255, 255, 255, 0.4);
+  margin-bottom: 25px;
+}
+
+.serviceDesc {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: clamp(14px, 1.4vw, 16px);
+  line-height: 1.6;
+  color: rgba(255, 255, 255, 0.75);
+  margin-bottom: 35px;
+}
+
+.actionButton {
+  background: transparent;
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  color: #ffffff;
+  padding: 12px 35px;
+  font-family: 'Montserrat', sans-serif;
+  font-size: 10px;
+  letter-spacing: 2px;
+  cursor: pointer;
+  text-transform: uppercase;
+  transition: all 0.3s ease;
+}
+
+.actionButton:hover {
+  background: rgba(255, 255, 255, 0.08);
+  border-color: #ffffff;
+}
+
+
+@media (max-width: 850px) {
+  .serviceItem, .rowReverse {
+    flex-direction: column; 
+    gap: 40px;
+    text-align: center;
+  }
+
+  .itemDivider {
+    margin: 0 auto 25px auto;
+  }
+
+  .servicesList {
+    gap: 90px;
+  }
+
+  .mainImg {
+    height: 280px;
+  }
+
+  .serviceNumber {
+    left: 0;
+    top: -25px;
+  }
+}
