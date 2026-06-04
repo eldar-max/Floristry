@@ -1,7 +1,15 @@
 import { defineConfig } from 'vite'
-import react from '@vitejs/react-refresh' // или @vitejs/plugin-react
+import react from '@vitejs/plugin-react'
+import { resolve } from 'path'
 
 export default defineConfig({
   plugins: [react()],
-  // Никаких сложных настроек базового пути здесь быть не должно
+  build: {
+    rollupOptions: {
+      input: {
+        main: resolve(__dirname, 'index.html'),
+        resume: resolve(__dirname, 'resume.html')
+      }
+    }
+  }
 })
